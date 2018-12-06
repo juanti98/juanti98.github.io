@@ -2,20 +2,23 @@
 <html>
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Barlow+Condensed">
         <style>
+            body {
+                font-family: 'Barlow Condensed', sans-serif;
+                font-size: 48px;
+            }   
             p {
                 text-align: center;
-                font-size: 60px;
+                font-size: 100px;
                 margin-top: 0px;
-                font-weight: bold;
                 color: white;
             }
             
             #titulo{
                 text-align: center;
-                font-size: 60px;
+                font-size: 50px;
                 margin-top: 0px;
-                font-weight: bold;
                 padding-top: 15%;
             }
             
@@ -78,12 +81,12 @@
     </head>
     
     <body>
-        <p id="titulo">Días Hasta la Gran Movida</p>
+        <p id="titulo">Yo sólo puedo mostrarte la puerta, tú eres quien la tiene que atravesar...</p>
         <p id="demo"></p>
         <canvas id="c"></canvas>
             <script>
             // Set the date we're counting down to
-            var countDownDate = new Date("Jan 15, 2019 9:00:00").getTime();
+            var countDownDate = new Date("Jan 18, 2019 9:00:00").getTime();
 
             // Update the count down every 1 second
             var x = setInterval(function() {
@@ -107,7 +110,7 @@
                 // If the count down is over, write some text 
                 if (distance < 0) {
                     clearInterval(x);
-                    document.getElementById("demo").innerHTML = "Ya es el día!!!";
+                    document.getElementById("demo").innerHTML = "Tienes la mirada de un hombre que acepta lo que ve porque está esperando despertar.";
                 }
             }, 1000);
                 
@@ -138,10 +141,10 @@
         {
             //Black BG for the canvas
             //translucent BG to show trail
-            ctx.fillStyle = "rgba(0, 0, 0, 0.04)";
+            ctx.fillStyle = "rgba(0, 0, 0, 0.06)";
             ctx.fillRect(0, 0, c.width, c.height);
 
-            ctx.fillStyle = "#0F0"; //green text
+            ctx.fillStyle = "#2E8B57"; //green text
             ctx.font = font_size + "px arial";
             //looping over drops
             for( var i = 0; i < drops.length; i++ )
