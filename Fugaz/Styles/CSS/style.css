@@ -1,0 +1,64 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* use viewport-relative units to cover page fully */
+body {
+    height: 100vh;
+    width: 100vw;
+}
+
+/* include border and padding in element width and height */
+* {
+    box-sizing: border-box;
+}
+
+/* full-sized  container that fills up the page */
+#backgroundBody {
+    height: 100%;
+    width: 100%;
+    background-image: url(../Img/Homepage.png);
+    background-size: contain;
+    background-position: top;
+    background-repeat: repeat;
+}
+
+.tintOverlap {
+    position:absolute;
+    top:50%;
+    transform: translate(50%,-50%);
+    height: 50%;
+    width: 50%;
+    /*background-color: rgba(255, 255, 255, 0.5);*/
+}
+
+/* Add a black background color to the top navigation */
+.topnav {
+    overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+    float: left;
+    color: #ffffffff;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+    font-weight: bold;
+    text-decoration: underline;
+    color: white;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+    font-weight: bold;
+    text-decoration: underline;
+    color: white;
+}
