@@ -1,1 +1,60 @@
-<a href="Fugaz\HTML\index.html">Fugaz</a>
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <title>Main Page</title>
+
+        <link rel="icon" href="Fugaz\Styles\Img\randomLogo.png"> 
+    </head>
+    
+    <style>
+        html{
+            /*
+            * Created with https://www.css-gradient.com
+            * Gradient link: https://www.css-gradient.com/?c1=f7c501&c2=6fff01&gt=l&gd=dbr
+            */
+            background: #F7C501;
+            background: linear-gradient(315deg, #F7C501, #6FFF01);
+        }
+
+        .center{
+            border-style: solid;
+            border-radius: 10%;
+            border-width: 5px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 10px;
+        }
+        .images{
+            width:800px;
+            border-radius: 10px;
+        }
+        @media only screen and (max-width: 430px) {
+            .images {
+                max-width: 256px;
+            }
+        }
+
+        @media only screen and (max-width: 1024px) {
+            .images {
+                max-width: 512px;
+            }
+        }
+
+    </style>
+    
+    <body>
+        <div class="center">
+            <table style="margin-left: auto; margin-right: auto;">
+                <tr> <!--Fugaz-->
+                    <a href="Fugaz\HTML\home.html"><img class="images" src="Fugaz\Styles\Img\fugazLogo.png" alt="Fugaz"></a>
+                </tr>
+            </table>
+        </div>
+    </body>
+</html>
+    
