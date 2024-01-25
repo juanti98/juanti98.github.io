@@ -10,6 +10,16 @@ body {
     width: 100vw;
 }
 
+body::before{
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2); /* Change the color and opacity as needed */
+}
 /* include border and padding in element width and height */
 * {
     box-sizing: border-box;
@@ -19,7 +29,7 @@ body {
 #backgroundBody {
     height: 100%;
     width: 100%;
-    background-image: url(../Img/Homepage.png);
+    background-image: url(../Img/forest.jpeg);
     background-size: contain;
     background-position: top;
     background-repeat: repeat;
@@ -34,31 +44,59 @@ body {
     /*background-color: rgba(255, 255, 255, 0.5);*/
 }
 
-/* Add a black background color to the top navigation */
+/*Anything related to top navigation bar is here*/
 .topnav {
     overflow: hidden;
-}
-
-/* Style the links inside the navigation bar */
-.topnav a {
+    /**background-color: rgba(0, 0, 0, 0.2);**/
+  }
+  
+  .topnav a {
     float: left;
-    color: #ffffffff;
+    display: block;
+    color: #ffffff;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
-    font-size: 17px;
-}
-
-/* Change the color of links on hover */
-.topnav a:hover {
-    font-weight: bold;
+    font-size: 32px;
+    text-shadow:
+    1px 1px 0 #585858,
+    -1px 1px 0 #585858,
+    -1px -1px 0 #585858,
+    1px -1px 0 #585858;
+  }
+  
+  .topnav a:hover {
     text-decoration: underline;
-    color: white;
-}
-
-/* Add a color to the active/current link */
-.topnav a.active {
-    font-weight: bold;
+  }
+  
+  .topnav a.active {
+    /*background-color: #04AA6D;*/
     text-decoration: underline;
-    color: white;
-}
+    /**color: white;**/
+  }
+  
+  .topnav .icon {
+    display: none;
+  }
+  
+  @media screen and (max-width: 600px) {
+    .topnav a:not(:first-child) {display: none;}
+    .topnav a.icon {
+      float: right;
+      display: block;
+    }
+  }
+  
+  @media screen and (max-width: 600px) {
+    .topnav.responsive {position: relative;}
+    .topnav.responsive .icon {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+    .topnav.responsive a {
+      float: none;
+      display: block;
+      text-align: left;
+    }
+  }
